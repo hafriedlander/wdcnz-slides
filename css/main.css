@@ -457,12 +457,12 @@ body {
 
 .reveal .slides {
 	position: absolute;
-	width: 900px;
+	width: 1180px;
 	height: 600px;
 	
 	left: 50%;
 	top: 50%;
-	margin-left: -450px;
+	margin-left: -550px;
 	margin-top: -320px;
 	padding: 20px 0px;
 	
