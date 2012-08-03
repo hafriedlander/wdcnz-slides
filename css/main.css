@@ -208,6 +208,8 @@ body {
 
 .reveal code {
 	font-family: monospace;
+	font-size: 28px;
+	line-height: 30px;
 }
 
 .reveal table th, 
