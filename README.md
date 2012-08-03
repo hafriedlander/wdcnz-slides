@@ -10,4 +10,4 @@ The presentation content itself is licensed under a Creative Commons Attribution
 If you're reading this README you're looking at the source code of the slideshow (which
 can be useful for seeing the authors notes)
 
-You can view the slideshow itself here: hafriedlander.github.com/wdcnz-slides
+You can view the slideshow itself here: http://hafriedlander.github.com/wdcnz-slides
