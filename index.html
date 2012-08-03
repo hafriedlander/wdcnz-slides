@@ -23,6 +23,12 @@
 		<style>
 			pre code { padding: 0 0.5em; }
 		</style>
+
+		<script>
+			function getEls(selector){
+				return Array.prototype.slice.call(document.querySelectorAll(selector),0);
+			}
+		</script>
 	</head>
 	
 	<body>
@@ -35,228 +41,994 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
-					<script>
-						// Delicously hacky. Look away.
-						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
-					</script>
+					<img src="http://localhost/slides/sslogo.png" />
+					<img src="http://localhost/slides/hamish.jpg" />
 				</section>
-				
+
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
+					<h1>Developing rich html applications</h1>
+					<h2>with Entwine, Backbone.js & SilverStripe</h2>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
+						<p>
+							Hi. My name is Hamish Friedlander, I'm the CTO of SilverStripe, and I'm here to give
+							a presention called, fairly obviously, "Developing rich html applications with Entwine, Backbone.js & SilverStripe"
+						</p>
+						<p>
+							I have to admit I'm a bit nervous. I've never given a speech in front of this many people before, nor
+							of this length. But I've been running through it over and over in my hotel room, and again this morning,
+							so I think at least the length is good. Right.
+						</p>
 					</aside>
 				</section>
-				
-				<!-- Example of nested vertical slides -->
+
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
+					<h1>Use Entwine, Backbone.js & SilverStripe</h1>
+					<h2>They're better than what you're using</h2>
+
+					<aside class="notes">
+						If you're developing a web application, you should use Entwine, Backbone.js and SilverStripe.
+						They're better than what you're using now - what you're using now is garbage.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Thanks</h1>
+
+					<aside class="notes">
+						<p>Thanks</p>
 						<p>
-							Slides can be nested inside of other slides,<br/>
-							try pressing <a href="#/2/1">down</a>.
+							Umm. Did that, did that seem short to anyone. It seemed. It seemed short, compared to the
+							other speeches. Hang on (pull up application, open up note, have 30 minutes visible).
 						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					## Markdown support
-					
-					For those of you who like that sort of thing. Instructions and a bit more info 
-					available [here](https://github.com/hakimel/reveal.js#markdown).
-
-					<pre><code contenteditable style="margin-top: 20px;">&lt;section data-markdown&gt;
-  ## Markdown support
-  For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-&lt;/section&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
 						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
+							Oh. Oh, 30 minutes, not 30 seconds. F... antastic. (ESC) Oh, look, there's a whole bunch
+							of slides I totally missed and haven't practised at all. Umm. OK. Oh well, prepardness
+							is overrated anyway I guess.
 						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
+					</aside>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
+
+					<section>
+						<h1>Developing rich html applications</h1>
+						<h2>with Entwine, Backbone.js & SilverStripe</h2>
+
+						<aside class="notes">
+							<h4>One (then down, then return here for two)</h4>
+							<p>
+								Anyway, so, based on the title, the subject of this presentation is ... fairly self explanatory
+								I guess. I'll be showing you how these tools, Entwine, Backbone.js & SilverStripe,
+								help you build web applications faster and structure them better. I'll give you an overview of
+								what they do and why you should use them, then do a quick run through of a demo application to
+								give you a bit of context.
+							</p>
+							<h4>Two</h4>
+							<p>
+								So, clearly I'm awesome and you should take everything I say as absolute truth. But you
+								didn't come here to hear my life story, you came here to learn code. Or I hope you did -
+								otherwise the rest of my presentation is going to be somewhat of a disappointment.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h1>Hello, my name is Hamish</h1>
+						<img src="hamish.jpg" />
+
+						<aside class="notes">
+							<h4>Back up after</h4>
+							<p>
+								But first, a quick bit about me, who I am and why you should listen to me.
+							</p>
+							<p>
+								As I've mentioned, my name is Hamish Friedlander and I'm the CTO of SilverStripe. I've been
+								with SilverStripe for nearly 4 years now - I joined as a regular developer, but through a combination
+								of advanced code noodling, flattery and blackmail I've worked my way up.
+							</p>
+							<p>
+								CTO sounds glamorous, but my day to day job still mostly consists of web development, splitting
+								time between working on the SilverStripe open source software and developing sites for clients.
+								Of course, because I'm a CTO these days I do it while sipping kristal and crusing around in a rolls
+								that's driving around on top of a super yacht, but it's still mostly the same.
+							</p>
+							<p>
+								I'm a bit of a generalist - I'll knuckle down into backend code or SQL, or work on front end code,
+								javascript, css, whatever needs doing. I'm happiest when working in javascript though. Of all the
+								commercially common languages it's by far my favorite. It's ubiquitous, nicely orthagonal,
+								fairly elegant and these days pretty damn fast.
+							</p>
+						</aside>
+					</section>
 				</section>
-				
+
+				<section id="many-libraries" data-state="many-libraries">
+					<h1>Developing rich html applications</h1>
+					<h2>with Entwine, Backbone.js & SilverStripe</h2>
+					<h3>and jQuery, Underscore, Showdown, Compass,</h3>
+					<h3>PHP, Apache, MySQL,</h3>
+					<h3>.......</h3>
+
+					<aside class="notes">
+						<p>
+							Of course, we're using more than just those three libraries. Even in a little application
+							like this we're using a heap of other javascript libraries, not to mention all the server
+							level tools we're built on, and so forth
+						</p>
+						<p>
+							These three are obviously the most important though. You can tell they're important because
+							they're right there in the title. So, what part of the system do these three occupy, and why
+							would you choose them?
+						</p>
+					</aside>
+
+					<style>
+						#many-libraries h3 { opacity: 0; -webkit-transition: opacity 4s; }
+					</style>
+
+					<script type="text/reveal">
+						Reveal.addEventListener('many-libraries', function(){
+							var opacity, list = getEls('#many-libraries h3');
+
+							(opacity = function() {
+								if (list.length) setTimeout(function(){
+									list.shift().style.opacity = 1;
+									opacity();
+								}, 1000);
+							})();
+						});
+					</script>
+				</section>
+
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-    
-    var nodes = document.querySelectorAll( selector );
+					<section>
+						<h2>SilverStripe</h2>
+						<img src="sslogo.png" />
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-      var node = nodes[i];
+						<aside class="notes">
+							<p>
+								Lets start from the server side, with SilverStripe. SilverStripe 3 to be more specific,
+								and I should try to be specific, because there's no place more forgiving of a minor technical
+								error than a developer conference.
+							</p>
+							<p>
+								SilverStripe 3.0 was released just over a month ago. It's a major reworking of the SilverStripe
+								system, with upgrades to pretty much every area.
+							</p>
+						</aside>
+					</section>
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+					<section>
+						<h3>SilverStripe</h3>
+						<h2>Framework</h2>
+
+						<aside class="notes">
+							<p>
+								For those not familiar with SilverStripe, it's not just the name of the company I work for -
+								it's also the name of an PHP object oriented open source web development platform split into
+								two parts, the first of which is called "Framework"
+							</p>
+							<p>
+								It provides all the usual sort of things you'd expect from a framework - an ORM,
+								a templating library, a system for routing & responding to requests, and so on. It's a bit
+								more feature packed than something deliberately austere like Rails - it's got a form
+								library included with lots of tasty field type, and includes a backend administration system
+								that provides File; and Member & Security Group management.
+							</p>
+							<p>
+								Whether you think that's a good thing depends a bit on whether you agree with David Heinemeier
+								Hansson or with me. People know who DHH is just by his initials, so he's obviously pretty famous,
+								and everyone knows we should listen to what famous people say. But we've found that adding
+								just a few extra features help us write apps faster and avoid writing the same code over and
+								over again.
+							</p>
+							<p>
+								We have kept an eye on making sure the core framework is fairly light weight though.
+								Like any good framework it's modular, which helps us extract slightly less commonly used
+								features, like a forum or full text search, out into separate modules.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe</h3>
+						<h2>CMS</h2>
+
+						<aside class="notes">
+							<p>
+								The other part of the SilverStripe open source web development platform is called "CMS"
+							</p>
+							<p>
+								Until the 3.0 release the CMS was SilverStripe's main shtick. SilverStripe CMS is a
+								content management system layered on top of SilverStripe Framework with all the features you'd
+								expect - draft, live and historic versions of pages, a drag-and-drop reorganisable site tree,
+								a WYSIWYG content editor - it's pretty good, is what I'm saying.
+							</p>
+							<p>
+								Even back at 2.0 SilverStripe was internally split into a framework and a CMS layer, but at the
+								time the framework wad\s never really used on it's own, with the result that those two components were
+								too tightly coupled to be used seperately. But we've found that, especially in the last
+								couple of years, we've been working on more and more web applications and rich web sites where
+								a CMS wasn't really required, so in 3 we made sure that the CMS really is an optional component
+							</p>
+							<p>
+								To prove that point, we won't be using the CMS in this presentation. But we could add
+								the CMS module at any time if later on we decided we did need CMS features after all.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe</h3>
+						<h2>Good for what ails you</h2>
+
+						<aside class="notes">
+							<p>
+								I use SilverStripe when developing web application for a pretty selfish reason. I'm employed
+								by the company that develops it, and am part of the core team on the project too. As CTO it's my
+								job to make sure it stays relevant as technology marches inexorably on.
+							</p>
+							<p>
+								There's more reasons to use it that just being paid to though. When we're not working on
+								the SilverStripe platform we're developing websites for clients on it. Not only does this
+								help pay the bills, and lets us solve problems for people other than developers, it gives
+								us an insite into what features and APIs work and what don't when developing those sorts of websites.
+							</p>
+							<p>
+								So even if I wasn't being paid to say it, I'd say that SilverStripe is in my opinion the best
+								open source PHP framework, and gives frameworks in other languages a run for their money
+							</p>
+							<p>
+								I am being paid to say that though. Just so we're clear.
+							</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Entwine</h2>
+						<img style="padding: 20px; background: rgba(0,0,0,0.7);" src="entlogo.png" />
+
+						<aside class="notes">
+							<p>
+								Next up is Entwine. Entwine is .. it's .... it is ... it's hard to describe. It's a pattern
+								matched type system for DOM elements in javascript. It's a library for concrete UI style
+								development. It's a replacement, amalgamation and extension of Prototype's behavior and lowpro, of
+								jQuery's livequery and effen.
+							</p>
+							<p>
+								It was born primarily out of my frustration with the jQuery UI API. I think jQuery is pretty
+								brilliant. It's core is a simple pattern that can be applied to a large section of your DOM
+								manipulation needs in an elegant manner. The same can not be said of the jQuery UI API.
+								jQuery UI is a very useful library, and I use it all the time, but I wouldn't describe it
+								as elegant. Although it's internal structure is definitely getting better overtime, it
+								can still at best be described as .. functional.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine</h3>
+						<h2>The C for your MV framework</h2>
+
+						<aside class="notes">
+							<p>
+								The best way I've found to describe Entwine is "It's the C for your MV framework". There
+								are heaps of great frameworks that enable MVC style development in a javascript based
+								web application - backbone (which we're covering here), spine, ember, knockout. There's a lot.
+								But most of them pretty much ignore the Controller portion of the stack, concentrating on the Model
+								and to a lesser extent View layer.
+							</p>
+							<p>
+								The reason is pretty simple - jQuery seems like it provides everything you need on the
+								controller side. It's only once you start building complex systems that you realise that
+								jQuery doesn't give you the structure, the code reuse, the pattern building, all those
+								things that you need to build large systems.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine</h3>
+						<h2>Bringing structure to jQuery style code</h2>
+						<pre><code>
+$('ul#todos li').live('click', function(e) {
+  if ($(e.target).is('.readonly')) { readonly(); }
+  else {
+    if ($(e.target).is('.warning') { warning(); }
+    original();
+  }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								We'll run through a more complete demo in a bit to try and give a better picture of what
+								Entwine gives you, but the basic idea is this:
+							</p>
+							<p>
+								Imagine you want to write some behaviour that attaches to the click event on a list element.
+								Say a list of todo items. Easy enough, just use jQuery's live event delegation.
+							</p>
+							<p>
+								But if you want special behaviour to happens on some elements of that list - lets say
+								they're read only - things get a bit trickier. That logic needs to happen in the same
+								click handler function you just wrote.
+							</p>
+							<p>
+								And if you have several special cases, and some of them behave completely differently
+								and some behave mostly the same with some tweaks, and list items can have more than one
+								special case attached, and that handler function gets pretty unwieldy.
+							</p>
+							<p>
+								Add modules that want to modify that handler with more special cases further, and jQuery
+								just doesn't cut it any more.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine</h3>
+						<h2>Specifically better</h2>
+						<pre><code>
+$('ul#todos li').entwine({
+  onclick: function(){ original(); }
+});
+$('ul#todos li.readonly').entwine({
+  onclick: function(){ readonly(); }
+});
+$('ul#todos li.warning').entwine({
+  onclick: function(){ warning(); this._super(); }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<h1>DOWN</h1>
+							<p>
+								Entwine solves this by leveraging something most web developers have at least a passing
+								familiarity with, CSS selectors. CSS selectors have a built in precedence system
+								called specificity.
+							</p>
+							<p>
+								By leveraging that precedence we get something that looks a little bit like an
+								object oriented type system for DOM elements, only instead of the DOM element
+								being declared as a particular class, it's class is implicit from all the selector
+								rules it matches.
+							</p>
+							<p>
+								Entwine isn't limited to overloading events in this manner. You can attach regular
+								methods which can be called like jQuery plugin methods, properties, and functions
+								that are called when an element is added or removed from the DOM, or when it's
+								classes and attributes change which Entwine rule it matches most specifically.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine</h3>
+						<h2>You might as well eat that cake fatty</h2>
+
+						<aside class="notes">
+							<p>
+								jQuery is about 32KB minified and gzipped. Entwine adds another 9KB to that.
+								In some cases 41KB is quite a lot - especially mobile sites, where 3G speeds
+								mean that's still a number to worry about - but for most projects you're already
+								including jQuery.
+							</p>
+							<p>
+								More you're probably including 100s of KB of images. I'm definitely for pragmatic
+								selection of tools. I'm hoping I can convince you that extra 9KB buys you something
+								worthwhile.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine</h3>
+						<h2>You've already got it</h2>
+
+						<aside class="notes">
+							<p>
+								I released Entwine a few years ago, and it does have a small following outside of
+								SilverStripe. However if you have come across it, it's probably because of it's use
+								in SilverStripe 3.
+							</p>
+							<p>
+								When we came to develop SilverStripe 3 one of the goals was that we wanted to move
+								the CMS off of the Prototype + Behaviour + some jQuery + other stuff javascript
+								system it was on and on to something more maintained, and hopefully easier to use.
+							</p>
+							<p>
+								The decision was made to move to jQuery. But although jQuery had almost everything
+								we wanted - an active community, continued growth, a developed and usable widget system
+								- it was hard to imagine how you would structure an application using it alone.
+							</p>
+							<p>
+								I had been developing Entwine for about a year at that point, advocating for it within
+								the company and using it on commercial projects. After some discussion we decided to
+								use in when developing the CMS. I like to imagine that decisions was made solely on Entwine's
+								technical merits and not influenced by my position at the company. I like to imagine lots of things.
+							</p>
+							<p>
+								The upshot of all this is, if you're using SilverStripe, you've already got a great,
+								practical and powerful solution for structuring your javascript included in the box.
+								I mean Entwine. In case that wasn't obvious
+							</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Backbone.js</h2>
+						<img style="padding: 20px;" src="backbonelogo.png" />
+
+						<aside class="notes">
+							<p>
+								Although you can use Entwine by itself, using it's built in property system or the DOM itself
+								to store model data, these days general wisdom is it's better to have a dedicated javascript
+								model layer.
+							</p>
+							<p>
+								So if you've got a C for your MV, you need an MV too. As I mentioned, SilverStripe and Entwine
+								work well with a many different javascript side MVC frameworks. I've picked
+								Backbone because I like it, I've used it before, and it's nice and light weight. But you
+								could use Ember or any other framework with similar design.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Backbone.js</h3>
+						<h2>Model citizen</h2>
+
+						<aside class="notes">
+							<p>
+								Anyone who has been doing javascript web applications is likely to have heard about
+								backbone. It's one of the first MVC systems for javascript that really seems to have
+								found some traction.
+							</p>
+							<p>
+								Although I don't know exactly why, it does a few things that probably helped.
+								It's compatibility with and similarity to Rails is one of them, especially when you add it's
+								CoffeeScript compatibility to the mix. It's lightness is another - it's the smallest possible
+								feature set to get to where the author wanted. This makes it flexible enough to fit into almost
+								any development environment.
+							</p>
+							<p>
+								It also somehow manages to feel nnately familiar. There isn't much of a learning curve to
+								using it - it mostly just does what you'd expect.
+							</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>And so, a quick demo</h2>
+					<h3>Gone through quickly</h3>
+
+					<aside class="notes">
+						<p>
+							The absolute best way to convince people Entwine is great is to get them
+							to use it - I've had several people that, once they used it, say "I never want to develop any
+							site without it again" - but I haven't yet figured out how to just force 350 people to use a
+							particular javascript library. And if I ever did develop mind control powers, that's not the first
+							thing I'd pick to use it for.
+						</p>
+						<p>
+							Given forcing you all to like it is out, the next best way to show you how these elements play together
+							is to run you through developing a demo project. Unfortunately a slide show is a pretty bad way to
+							go through code, so I'll keep this fairly fast.
+						</p>
+						<p>
+							I'll be taking you through writing an application that lists and lets you edit memos
+							to yourself. You saw the outcome at the beginning of my presentation, here's another look.
+						</p>
+						<p>
+							Not terribly stunning as ideas go, but potentially usable. If you were in Silicon Valley it
+							might get you maybe a million in VC capital.
+						</p>
+						<p>
+							After this presentation I'll stick the demo up on github and people can checkout the code
+							at their leisure. It's not a perfect scintillating jewel, but it's a good starting point
+							for getting a feel for these components and how they might help you.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+
+					<section>
+						<h3>SilverStripe - server side model</h3>
+						<h5>mysite/code/models/Memo.php</h5>
+						<pre><code class="php">
+class Memo extends DataObject {
+  static $db = array(
+    'Title' => 'Varchar',
+    'Tags' => 'Varchar'
+  );
+}
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								So you've downloaded the SilverStripe Framework installer, first thing
+								you'll probably want to do is create a model. So here one is. Extending
+								off DataObject gets you a persistable object that saves to a database.
+							</p>
+						</aside>
+					</section>
+
+
+					<section>
+						<h3>SilverStripe - more models</h3>
+						<h5>mysite/code/models/TextMemo.php</h5>
+						<pre><code class="php">
+class TextMemo extends Memo {
+  static $db = array(
+    'Note' => 'Text'
+  );
+}
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								We'll also create a subclass of Memo that has some additional notes. Lets
+								say you're planning on also adding memos with images, videos, etc at some point.
+								SilverStripe takes care of mapping a hierarchical class structure to SQL tables.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe - server side admin</h3>
+						<h5>mysite/code/MemoAdmin.php</h5>
+						<pre><code class="php">
+class MemoAdmin extends ModelAdmin {
+  public static $managed_models = array('Memo');
+  public static $url_segment = 'memo-admin';
+  public static $menu_title = 'Memo Admin';
+}
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								Now lets create a backend administration controller for that model. The result of which
+								looks like..
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe - server side admin</h3>
+						<img src="memoadmin.png" />
+
+						<aside class="notes">
+							<p>
+								This. These administration interfaces aren't skeletons, they're built dynamically
+								from model introspection, and there's heaps of hook points to tweak the form.
+								We're pretty happy with this for now though - this admin panel isn't going to be
+								the main interface anyway.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe - REST Read</h3>
+						<pre><code class="php">
+class Memo extends DataObject {
+  use RESTItem;
+  static $default_fields = array('ID', 'Title', 'Tags');
+  ...
+}
+
+class Memo_Handler extends RESTItem_Handler {
+  static $allowed_actions = array('GET');
+  function GET($request) { return $this->respondWith('*'); }
+}
+</code></pre>
+
+						<aside class="notes">
+							<p>
+								Then we want to make our model accessible via a REST interface. To do that
+								I've added a SilverStripe module called "restassured", which is on github.
+							</p>
+							<p>
+								Once restassured is installed, which is just a matter of dropping the module
+								directory into your code, you can then make Memo into a RESTItem, list
+								the fields that should be returned in the REST body, and add a handler
+								to handle GET requests
+							</p>
+							<p>
+								Not shown is a similar change to TextMemo
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe - REST Collection</h3>
+						<pre><code class="php">
+class Memos extends ViewableData {
+  use RESTCollection;
+  function getItems() { return Memo::get()->toArray(); }
+  function getItem($id) { return Memo::get()->byID($id); }
+}
+
+class Memos_handler extends RESTCollection_Handler {
+  static $allowed_actions = array('GET');
+  function GET($request) {
+    return $this->respondWith('Items.*');
   }
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								restassured models backbone's idea of model structure a bit - the idea of
+								items and collections at least. So here we're creating a Memo Collection (which will
+								just contain all memos), and adding a handler to control how to respond
+								to GET requests on the collection
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>SilverStripe - REST Create & Write</h3>
+						<pre><code class="php">
+&lt;Code removed for being too long and boring&gt;
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								You follow a similar process for making the Create, Update and Delete
+								portions of the REST server. It's pretty much what we just went over, only
+								sideways. Check out the demo for the gories
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Trophy achieved - REST interface</h3>
+						<img src="trophy.jpg" />
+
+						<aside class="notes">
+							<p>
+								So we haven't done any javascript yet, but in about 50 lines of code we've created a hierarchy
+								of persistant models, added an administration interface for setting up and mucking about
+								with data directly, and exposed those models via a read/write rest interface.
+							</p>
+						</aside>
+					</section>
+
+
 				</section>
 
 				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
+					<section>
+						<h3>Backbone.js - client side model</h3>
+						<pre><code class="javascript">
+var Memo = Backbone.Model.extend({
+  idAttribute: 'ID',
+  urlRoot: 'rest/Memo',
+  defaults: {'$type': 'Memo'}
+});
+var Memos = Backbone.Collection.extend({
+  model: Memo,
+  url: 'rest/Memo'
+});
+						</code></pre>
+
+
+						<aside class="notes">
+							<p>
+								Backbone models are schemaless, so there's even less to do here. I've just created
+								a model and a collection, told backbone the ID attribute is uppercase, given it URLs to both
+								the collection and the individual items, and you're good to go.
+							</p>
+							<p>
+								Not shown here is a short but slightly twisty piece of code that adjusts the collection
+								as it comes over the wire from restassured to what backbone expects. Although
+								backbone can handle models in a hierarchy, it doesn't have any idea how to express
+								that in JSON, so we need to give it a little bit of a hand.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Backbone.js - more models</h3>
+						<pre><code class='javascript'>
+var converter = new Showdown.converter();
+
+var TextMemo = Memo.extend({
+  defaults: {'$type': 'TextMemo'},
+
+  getNoteHtml: function(){
+    return converter.makeHtml(this.get('Note'));
+  }
+});
+						</code></pre>
+
+
+						<aside class="notes">
+							<p>
+								Here's the TextMemo subclass. It's super trivial, so I've included the method that converts
+								the Note field, which is in markdown format, to html, just to spice things up a bit.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Trophy achieved - was that it?</h3>
+						<img src="trophy.jpg" />
+
+						<aside class="notes">
+							<p>
+								Now we've got a set of client side models that mirror the server side ones. We're not
+								doing anything with them yet, but if you pull up a javascript console you can pull
+								down the latest memos from the server, modify them and upload them with a couple of
+								function calls.
+							</p>
+						</aside>
+					</section>
+
 				</section>
-				
+
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
+					<section>
+						<h3>Entwine - index.html</h3>
+						<pre><code>
+&lt;div id="scroll"&gt;
+  &lt;ul id="memos"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								Now we're getting to the meat of the matter. Entwine works on HTML elements,
+								so here's the part of the html we're interested in.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - bootstrap</h3>
+						<pre><code class="javascript">
+$('#memos').entwine({
+  onadd: function(){
+    this.setMemos(new Memos());
+  },
+
+  Memos: null,
+
+  setMemos: function(memos){
+    this._super(memos);
+    memos.on('reset', function(){ this.render(); }, this);
+    memos.fetch();
+  }
+
+  render: function(){
+    /* Create &ltli class="memo"&gt; elements, one per memo */
+  }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								And here's the bootstrap code. When the element with the ID of #memos gets added to the DOM,
+								(which in this case is on DOM Ready, because it's already in the html) the onadd method here
+								gets called. That sets the Memos property to be a new Backbone collection.
+							</p>
+							<p>
+								We're overriding the setMemos function to also bind to the reset event that Backbone raises,
+								hooking it up to the render function so that every time the collection is reloaded we
+								re-render ourselves.
+							</p>
+							<p>
+								For brevity I haven't included the render function. This creates one li element for every Backbone
+								Memo object in the collection, then calls setMemo on that li element with that backbone object.
+								In the demo code it does this directly via jQuery, but you'd probably want to use something more sophisticated
+								for a real app - at the very least using underscore templates, and maybe even something like the
+								Mustache templating system.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - rendering memos</h3>
+						<pre><code class="javascript">
+$('.memo').entwine({
+  Memo: null,
+
+  Tmplt: '&lt;h1 data-attr="Title">&lt;%= get("Title") %>&lt;/h1>',
+
+  render: function(){
+    this.html(_.template(this.getTmplt(), this.getMemo()));
+  }
+});
+
+$('.memo.textmemo').entwine({
+  getTmplt: function() {
+    return this._super() +
+    '&lt;div data-attr="Note">&lt;%= getNoteHtml() %>&lt;/div>';
+  }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								The individual Memo elements each render themselves. They do this both on creation, and when
+								the underlying Backbone model changes, using a similar setModel override pattern to the previous
+								slide
+							</p>
+							<p>
+								Rather than repeat that code, I've shown the render method here, because it shows some more
+								Entwine overriding. In this case we're overriding the value of the Tmplt propery. For all elements
+								with a class of memo a base version is provided. We then override it with a more complex
+								version that also includes the note html if the element has a textmemo class.
+							</p>
+							<p>
+								Take note of the data-attr propery that is added to each item in the template, we'll be using
+								that in a second
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - deets to your kids</h3>
+						<pre><code class="javascript">
+$('.memo *').entwine({
+  getMemo: function() {
+    return this.parents('.memo').getMemo();
+  }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								Here we're adding a method that's available to any child of a memo list element,
+								which returns the Backbone Model of the related memo.
+							</p>
+							<p>
+								Working with Entwine, your code is tied to the structure of your elements - there's
+								an implicit reference from every class to every other via whatever selector gets you there.
+							</p>
+							<p>
+								In this case that relationship is an ascendant relationship, but similar patterns
+								get you siblings, children, or any other enhanced element anywhere in your DOM.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - handling input</h3>
+						<pre><code class="javascript">
+$('.memo > *').entwine({
+  onclick: function(){
+    var input = this.getInput();
+    if (input) input.insertAfter(this);
+  }
+});
+
+$('.memo > [data-attr]').entwine({
+  getInput: function(){
+    return $('&lt;input type="text" />');
+  }
+});
+
+$('.memo > [data-attr=Note]').entwine({
+  getInput: function(){
+    return $('&lt;textarea>&lt;/textarea>');
+  }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								Here we're making each of the elements inside a memo editable by clicking on them.
+								The first entwine block binds to the onclick event, and calls getInput. One of the things
+								to note about entwine is that if a method exists, but has no version whose selector matches
+								the element you called it on, it just does nothing, rather than throw an error. Because
+								of this it's safe to call getInput on any element.
+							</p>
+							<p>
+								We then make any element that has a data-attr attribute present return a regular text input,
+							   making them editable on a single line. Again here we can see (almost as if this demo was
+								designed to show off this feature) an Entwine override that makes elements with a data-attr
+								set to "Note" use a textarea instead of an input.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - dealing with it</h3>
+						<pre><code class="javascript">
+$('.memo input, .memo textarea').entwine({
+  inpVal: function(v) { return this.val(v); },
+
+  onadd: function() {
+    this.inpVal(this.getMemo().get(this.getProperty()));
+  },
+
+  onfocusout: function(){
+    this.getMemo().set(this.getProperty(), this.inpVal());
+    this.getMemo().save();
+    this.remove();
+  }
+});
+
+$('#memos .memo textarea').entwine({
+  inpVal: function(v) { return this.text(v); }
+});
+						</code></pre>
+
+						<aside class="notes">
+							<p>
+								Finally we're saving the content of that input back to the model & from there to
+								the serverside when we're done. You can see the same override pattern here
+								where we need to override textareas to use text() instead of val() to get and
+								set the input field value.
+							</p>
+							<p>
+								In this case
+						</aside>
+					</section>
+
+					<section>
+						<h3>Entwine - and the rest</h3>
+
+						<aside class="notes">
+							<p>
+								There's lots of entwine code we haven't covered yet. I've cut out  the tweaky
+								stuff that goes into making a user interface - animations, etc. But hopefully that gives
+								you enough of a taste that you're keen for more.
+							</p>
+						</aside>
+					</section>
 				</section>
-				
+
 				<section>
-					<h2>Stellar Links</h2>
+					<h3>SilverStripe, Backbone.js and Entwine</h3>
+					<h2>Your three-fold path to nirvana</h2>
+
+					<aside class="notes">
+						<p>
+							So hopefully that's given you enough of a taste to make you interested in checking out more.
+							There's definitely a lot of competing tools in the web app development space, a lot
+							of great growth, a lot of sometimes cool sometimes crazy ideas.
+						</p>
+						<p>
+							These tools are commercially proven, have a dedicated company behind them ensuring they
+							stay up to date and relevant, and I personally really enjoy developing with them. I think
+							you will to.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Links</h2>
+					<img style="display: block; margin: 0 auto 15px;" src="qrcode.png" />
 					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+						<li><a href="https://github.com/hafriedlander/wdcnz-memodemo">The demo : https://github.com/hafriedlander/wdcnz-memodemo</a></li>
+						<li><a href="https://github.com/hafriedlander/wdcnz-slides">These slides : https://github.com/hafriedlander/wdcnz-slides</a></li>
+						<li><a href="http://silverstripe.org">SilverStripe : http://silverstripe.org</a></li>
+						<li><a href="http://backbonejs.org">Backbone.js : http://backbonejs.org</a></li>
+						<li><a href="https://github.com/hafriedlander/jquery.entwine">Entwine : https://github.com/hafriedlander/jquery.entwine</a></li>
 					</ul>
+
+
+					<aside class="notes">
+						<p>
+							If you are interested in checking out more, here are some links to remember.
+						</p>
+					</aside>
 				</section>
-				
+
 				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
+					<h1>Thanks</h1>
+					<h2>(for realz)</h2>
+					<h3 class="inverted">Hamish Friedlander / SilverStripe</h3>
 				</section>
 			</div>
 
@@ -290,14 +1062,14 @@ function linkify( selector ) {
 				scripts.push( 'lib/js/data-markdown.js' );
 			}
 
+			scripts.push( 'js/reveal.js' );
+
 			// If we're runnning the notes server we need to include some additional JS
 			// TODO Is there a better way to determine if we're running the notes server?
 			if( window.location.host === 'localhost:1947' ) {
 				scripts.push( 'socket.io/socket.io.js' );
 				scripts.push( 'plugin/speakernotes/client.js' );
 			}
-
-			scripts.push( 'js/reveal.js' );
 
 			// Load the scripts and, when completed, initialize reveal.js
 			head.js.apply( null, scripts.concat([function() {
@@ -319,10 +1091,15 @@ function linkify( selector ) {
 					progress: true,
 					history: true,
 					
-					theme: Reveal.getQueryHash().theme || 'default', // default/neon/beige
-					transition: Reveal.getQueryHash().transition || 'default' // default/cube/page/concave/linear(2d)
+					theme: Reveal.getQueryHash().theme || 'beige', // default/neon/beige
+					transition: Reveal.getQueryHash().transition || 'concave' // default/cube/page/concave/linear(2d)
 				});
 
+				getEls('script[type="text/reveal"]').forEach(function(script){
+					var script = script.cloneNode(true);
+					script.setAttribute('type', 'text/javascript');
+					document.body.appendChild(script);
+				});
 			}]));
 			
 			// Load highlight.js for syntax highlighting of code samples
